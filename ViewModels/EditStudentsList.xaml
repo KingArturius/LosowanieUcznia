@@ -1,0 +1,36 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LosowanieUcznia.ViewModels.EditStudentsList"
+             Title="Edytuj listę uczniów">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/styles.css"/>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10">
+        <Button Text="⬅ Powrót" Clicked="OnBackButtonClicked" class="backButton"/>
+        <ScrollView>
+            <CollectionView x:Name="StudentsListView"
+                            ItemsSource="{Binding SelectedClass.Students}"
+                            SelectionMode="None"
+                            class="collectionview">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="8" Orientation="Horizontal" HorizontalOptions="FillAndExpand" class="lineInList">
+                            <CheckBox IsChecked="{Binding IsPresent}" />
+                            <Label Text="{Binding FullName}" FontSize="14" VerticalOptions="Center" class="labelInList"/>
+                            <Label Text="{Binding Number}" FontSize="12" TextColor="Gray" class="labelInList"
+                                   HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                            <Button Text="Usuń" Clicked="OnDeleteStudentClicked"
+                                    CommandParameter="{Binding}" class="deleteButton"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        <Entry x:Name="FirstNameEntry" Placeholder="Imię" class="entryAdd"/>
+        <Entry x:Name="LastNameEntry" Placeholder="Nazwisko" class="entryAdd"/>
+        <Entry x:Name="NumberEntry" Placeholder="Numer" Keyboard="Numeric" class="entryAdd"/>
+        <Button Text="Dodaj ucznia" Clicked="OnAddStudentClicked" class="buttonAdd"/>
+    </StackLayout>
+</ContentPage>

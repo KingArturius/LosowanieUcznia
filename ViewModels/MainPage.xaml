@@ -1,0 +1,46 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LosowanieUcznia.ViewModels.MainPage"
+             Title="Losowanie Ucznia">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/styles.css"/>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+            <Button Text="Importuj uczniów" 
+                    Clicked="OnImportBtnClicked"
+                    class="mainButtons"/>
+            <Button Text="Zapisz uczniów" 
+                    Clicked="OnSaveBtnClicked"
+                    class="mainButtons"/>
+            <Button Text="Edytuj listę uczniów"
+                    Clicked="OnEditStudentsListClicked"
+                    class="mainButtons"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Padding="20" HorizontalOptions="CenterAndExpand">
+            <VerticalStackLayout>
+                <Label Text="Wybierz klasę:" TextColor="White" class="mainLabel"/>
+                <Picker x:Name="ClassPicker" 
+                    SelectedIndexChanged="OnClassSelected" 
+                    ItemDisplayBinding="{Binding ClassName}" 
+                    class="pickerMain"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Szczęśliwy numerek:"  TextColor="White" class="mainLabel"/>
+                <Entry x:Name="LuckyNumberEntry" Placeholder="Wpisz numer" Keyboard="Numeric" class="entryMain"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+        <Label x:Name="result" TextColor="White" class="resultLabel"/>
+        <Button Text="Losuj ucznia" 
+                x:Name="DrawButton" 
+                 TextColor="White"
+                Clicked="OnDrawButtonClicked" 
+                IsEnabled="False"
+                class="drawButton"/>
+    </StackLayout>
+</ContentPage>

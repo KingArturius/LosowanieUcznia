@@ -1,0 +1,104 @@
+stacklayout {
+    background: #222;
+    color: white;
+}
+
+.mainButtons {
+    width: 220;
+    margin: 40 10;
+    text-align: center;
+    background: #444;
+    border-radius: 8;
+}
+
+label {
+    font-weight: bold;
+    margin: 12 8;
+}
+
+.drawButton {
+    width: 320;
+    margin: 15;
+    background: #555;
+    font-weight: bold;
+    border-radius: 8;
+}
+
+.labelInList {
+    font-weight: bold;
+    margin: 12;
+}
+
+.entryMain {
+    width: 160;
+    margin: 10 20;
+    background: white;
+    border-radius: 4;
+    padding: 8;
+}
+
+.mainLabel{
+    margin: 0 10;
+}
+
+verticalstacklayout {
+    text-align: center;
+    margin: 20 10;
+}
+
+.resultLabel {
+    font-size: 34;
+    text-align: center;
+    font-weight: bold;
+    margin: 60 12;
+}
+
+.backButton{
+    width: 200;
+    background: #666;
+    color: white;
+}
+
+.entryAdd {
+    width: 320;
+    margin: 12;
+    padding: 12;
+    border-radius: 8;
+    background: #444;
+}
+
+.labelAdd {
+    font-size: 14;
+    margin: 0 8;
+}
+
+.buttonAdd {
+    width: 220;
+    margin: 12;
+    background: #666;
+    border-radius: 6;
+}
+
+.deleteButton {
+    height: 55;
+    background: #900;
+    border-radius: 6;
+}
+
+scrollView {
+    height: 240;
+    margin: 12;
+    background: #2a2a2a;
+}
+
+.pickerMain {
+    width: 140;
+    margin: 10;
+    background: white;
+    border-radius: 4;
+    padding: 6;
+}
+
+.lineInList{
+    background: #DDD;
+}
