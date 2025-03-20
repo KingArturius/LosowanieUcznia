@@ -1,0 +1,20 @@
+Jan, Kowalski, 1A, 5, yes
+Anna, Nowak, 1A, 12, no
+[1A Queue]
+5
+Piotr, Wiśniewski, 2B, 7, yes
+Maria, Zielińska, 2B, 3, yes
+Tomasz, Lewandowski, 2B, 9, no
+[2B Queue]
+7
+9
+Aleksandra, Wójcik, 3C, 15, yes
+Kamil, Nowicki, 3C, 8, yes
+Magdalena, Kaczmarek, 3C, 2, yes
+Paweł, Nowak, 3C, 4, yes
+Jan, Kowalski, 3C, 7, no
+Karol, Korczak, 3C, 6, no
+[3C Queue]
+2
+15
+4
